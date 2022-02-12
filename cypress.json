@@ -1,0 +1,4 @@
+{
+    "watchForFileChanges": true,
+    "defaultTimeout": 20000
+}
