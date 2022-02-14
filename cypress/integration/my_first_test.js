@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+const LoginPage = require("./login_test")
+
 
 it('google test', ()=>{
 
@@ -21,13 +23,13 @@ it('google test', ()=>{
     cy.contains('Video').click()
 })
 
+const loginPage = new LoginPage()
 
 it.only("login test",()=>{
-    cy.visit("https://opensource-demo.orangehrmlive.com/auth/login")
-
-    cy.wait(6000)
-
-    cy.get('#btnLogin').click()
+    loginPage.navigate("https://opensource-demo.orangehrmlive.com/auth/login")
+    loginPage.enterUsername("Admin")
+    loginPage.enterPassword("admin123")
+    loginPage.clickLogin()
 
     cy.get('#menu_admin_viewAdminModule > b').click()
 
