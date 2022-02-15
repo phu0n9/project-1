@@ -1,0 +1,87 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-15T14:17:16.198Z",
+    "end": "2022-02-15T14:17:24.599Z",
+    "duration": 8401,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "42e01ced-119d-4102-a3b0-8a029c777435",
+      "title": "",
+      "fullFile": "cypress/integration/assertions.js",
+      "file": "cypress/integration/assertions.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "learning assertion",
+          "fullTitle": "learning assertion",
+          "timedOut": null,
+          "duration": 3840,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit(\"https://example.cypress.io/\");\ncy.contains(\"get\").click(); // Implicit assertion\n// Generally, we use Implicit assertions when we want to:\n// Assert multiple validations about the same subject.\n// Alter the subject before making the assertions on the subject.\n// should-contain --> check if the button contain the word \"Button\"\n// should-have:\n// .class --> check if button have class query-btn\n// should-be: check state of button\n// should-equal: check attribute value \n// and --> chained assertion\ncy.get('#query-btn').should(\"contain\", \"Button\").should(\"have.class\", \"query-btn\").should(\"be.visible\");\ncy.get(\"#query-btn\").invoke(\"attr\", \"id\").should(\"equal\", \"query-btn\");\ncy.get(\"#query-btn\").should(\"contain\", \"Button\").and(\"have.class\", \"query-btn\"); // Explicit assertions\n// Generally, You will be using \"Explicit assertions\" when you want to:\n// Perform some custom logic before making the assertions on the given subject.\n// Perform multiple assertions against the same subject.\nexpect(true).to.be.true;\nlet name = \"Phuong\";\nexpect(name).to.be.equal(\"Phuong\");\nassert.equal(4, 4, \"Not equal\");\nassert.strictEqual(4, 4, \"Not equal\");",
+          "err": {},
+          "uuid": "e5da67cf-cfae-4fab-9387-ed60538706bd",
+          "parentUUID": "42e01ced-119d-4102-a3b0-8a029c777435",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "e5da67cf-cfae-4fab-9387-ed60538706bd"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3840,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
