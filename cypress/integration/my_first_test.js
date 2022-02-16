@@ -1,4 +1,6 @@
-/// <reference types="cypress" />
+// allow auto completion in this script by referencing cypress library/cypress node package
+/// <reference types="cypress" /> 
+
 
 const LoginPage = require("./login_test")
 

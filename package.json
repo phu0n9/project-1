@@ -6,9 +6,8 @@
   "scripts": {
     "pretest": "rimraf -r ./cypress/reports/*.json",
     "test": "npm run cypress-test || npm run posttest",
-    "cypress-test":"cypress run",
-    "posttest":"npm run merge-reports && npm run generate-htmlreport",
-    "generate-tests": " --reporter mochawesome",
+    "cypress-test": "cypress run",
+    "posttest": "npm run merge-reports && npm run generate-htmlreport",
     "merge-reports": "mochawesome-merge cypress/reports/*.json > cypress/reports/output.json",
     "generate-htmlreport": "marge cypress/reports/output.json --reportDir cypress/reports"
   },
@@ -23,5 +22,13 @@
   "devDependencies": {
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phu0n9/project-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phu0n9/project-1/issues"
+  },
+  "homepage": "https://github.com/phu0n9/project-1#readme"
 }
